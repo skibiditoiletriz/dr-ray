@@ -106,9 +106,9 @@ local Slider = Tab:CreateSlider({
 
 local Dropdown = Tab:CreateDropdown({
    Name = "Fabric:",
-   Options = {"Option 1","Option 2"},
-   CurrentOption = {"Option 1"},
-   MultipleOptions = false,
+   Options = {"Fabric","SmoothPlastic","ForceField","Neon","Glass","CrackedLava","Foil","Sand"},
+   CurrentOption = {"Fabric"},
+   MultipleOptions = true,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
    -- The function that takes place when the selected option is changed
@@ -118,10 +118,10 @@ local Dropdown = Tab:CreateDropdown({
 
 local Dropdown = Tab:CreateDropdown({
    Name = "Bodypart:",
-   Options = {"Option 1","Option 2"},
-   CurrentOption = {"Option 1"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Options = {"Head","Torso"},
+   CurrentOption = {"Head"},
+   MultipleOptions = true,
+   Flag = "Dropdown2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
    -- The function that takes place when the selected option is changed
    -- The variable (Option) is a table of strings for the current selected options
@@ -135,7 +135,7 @@ local Dropdown = Tab:CreateDropdown({
    Options = {"Default","Rust","Neverlose","Gamesense"},
    CurrentOption = {"Default"},
    MultipleOptions = true,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Dropdown3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
    -- The function that takes place when the selected option is changed
    -- The variable (Option) is a table of strings for the current selected options
@@ -145,4 +145,6 @@ local Dropdown = Tab:CreateDropdown({
 local Tab = Window:CreateTab("Visuals", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("Player")
+
+
 
