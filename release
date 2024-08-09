@@ -237,7 +237,7 @@ local Toggle = Tab:CreateToggle({
 })
 
 local Slider = Tab:CreateSlider({
-   Name = "Slider Example",
+   Name = "LongNeck",
    Range = {0, 8.3},
    Increment = 0.1,
    Suffix = "Longneck3",
