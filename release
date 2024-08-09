@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "by Spooky",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
+      FolderName = spooky.pub, -- Create a custom folder for your hub/game
       FileName = "spooky.pub"
    },
    Discord = {
@@ -71,7 +71,7 @@ local Slider = Tab:CreateSlider({
    Increment = 1,
    Suffix = "Width",
    CurrentValue = 6,
-   Flag = "Width", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Width1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the slider changes
    -- The variable (Value) is a number which correlates to the value the slider is currently at
@@ -84,7 +84,7 @@ local Slider = Tab:CreateSlider({
    Increment = 1,
    Suffix = "Height",
    CurrentValue = 6,
-   Flag = "Hieght", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Hieght1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the slider changes
    -- The variable (Value) is a number which correlates to the value the slider is currently at
@@ -97,7 +97,7 @@ local Slider = Tab:CreateSlider({
    Increment = 0.1,
    Suffix = "Trans",
    CurrentValue = 10,
-   Flag = "Trans", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Trans1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the slider changes
    -- The variable (Value) is a number which correlates to the value the slider is currently at
@@ -229,7 +229,7 @@ local Section = Tab:CreateSection("Longneck")
 local Toggle = Tab:CreateToggle({
    Name = "LongNeck",
    CurrentValue = false,
-   Flag = "Longneck", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Longneck1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the toggle is pressed
    -- The variable (Value) is a boolean on whether the toggle is true or false
@@ -240,7 +240,7 @@ local Slider = Tab:CreateSlider({
    Name = "LongNeck",
    Range = {0, 8.3},
    Increment = 0.1,
-   Suffix = "Longneck3",
+   Suffix = "Longneck",
    CurrentValue = 0,
    Flag = "Longneck2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
