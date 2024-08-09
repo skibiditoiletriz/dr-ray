@@ -1,5 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
+ 
 local Window = Rayfield:CreateWindow({
    Name = "spooky.pub",
    LoadingTitle = "spooky.pub",
@@ -25,7 +25,7 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-
+ 
 Rayfield:Notify({
    Title = "spooky.pub",
    Content = "spooky.pub has loaded successfully",
@@ -40,11 +40,11 @@ Rayfield:Notify({
    },
 },
 })
-
+ 
 local Tab = Window:CreateTab("Combat", 4483362458) -- Title, Image
-
+ 
 local Section = Tab:CreateSection("HitBox")
-
+ 
 local Toggle = Tab:CreateToggle({
    Name = "Enabled",
    CurrentValue = false,
@@ -54,7 +54,7 @@ local Toggle = Tab:CreateToggle({
    -- The variable (Value) is a boolean on whether the toggle is true or false
    end,
 })
-
+ 
 local Toggle = Tab:CreateToggle({
    Name = "Collision",
    CurrentValue = false,
@@ -64,7 +64,7 @@ local Toggle = Tab:CreateToggle({
    -- The variable (Value) is a boolean on whether the toggle is true or false
    end,
 })
-
+ 
 local Slider = Tab:CreateSlider({
    Name = "Width",
    Range = {0, 8},
@@ -77,7 +77,7 @@ local Slider = Tab:CreateSlider({
    -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
-
+ 
 local Slider = Tab:CreateSlider({
    Name = "Height",
    Range = {0, 8},
@@ -90,7 +90,7 @@ local Slider = Tab:CreateSlider({
    -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
-
+ 
 local Slider = Tab:CreateSlider({
    Name = "Transparency",
    Range = {0, 1},
@@ -103,7 +103,7 @@ local Slider = Tab:CreateSlider({
    -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
-
+ 
 local Dropdown = Tab:CreateDropdown({
    Name = "Fabric:",
    Options = {"Fabric","SmoothPlastic","ForceField","Neon","Glass","CrackedLava","Foil","Sand"},
@@ -115,7 +115,7 @@ local Dropdown = Tab:CreateDropdown({
    -- The variable (Option) is a table of strings for the current selected options
    end,
 })
-
+ 
 local Dropdown = Tab:CreateDropdown({
    Name = "Bodypart:",
    Options = {"Head","Torso"},
@@ -126,3 +126,127 @@ local Dropdown = Tab:CreateDropdown({
    -- The function that takes place when the selected option is changed
    -- The variable (Option) is a table of strings for the current selected options
    end,
+})
+ 
+local Section = Tab:CreateSection("Hitsound")
+ 
+local Dropdown = Tab:CreateDropdown({
+   Name = "Hitsound:",
+   Options = {"Default","Rust","Neverlose","Gamesense"},
+   CurrentOption = {"Default"},
+   MultipleOptions = true,
+   Flag = "Dropdown3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Option)
+   -- The function that takes place when the selected option is changed
+   -- The variable (Option) is a table of strings for the current selected options
+   end,
+})
+ 
+local Tab = Window:CreateTab("Visuals", 4483362458) -- Title, Image
+ 
+local Section = Tab:CreateSection("Player")
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Enables",
+   CurrentValue = false,
+   Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Boxes",
+   CurrentValue = false,
+   Flag = "Boxes", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Names",
+   CurrentValue = false,
+   Flag = "Names", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Tool",
+   CurrentValue = false,
+   Flag = "Tool", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Chams",
+   CurrentValue = false,
+   Flag = "Chams", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Sleep Check",
+   CurrentValue = false,
+   Flag = "Sleepcheck", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Section = Tab:CreateSection("Crosshair")
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "Enabled",
+   CurrentValue = false,
+   Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Tab = Window:CreateTab("Local", 4483362458) -- Title, Image
+ 
+local Section = Tab:CreateSection("Fullbright")
+ 
+ 
+ 
+local Section = Tab:CreateSection("Longneck")
+ 
+local Toggle = Tab:CreateToggle({
+   Name = "LongNeck",
+   CurrentValue = false,
+   Flag = "Longneck1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   local LongNeck = Workspace.Ignore.LocalCharacter.Bottom.PrismaticConstraint
+        LongNeck.LowerLimit = 8
+        LongNeck.UpperLimit = 8  -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+ 
+local Slider = Tab:CreateSlider({
+   Name = "LongNeck",
+   Range = {0, 8},
+   Increment = 1,
+   Suffix = "Longneck",
+   CurrentValue = 0,
+   Flag = "Longneck2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
