@@ -248,3 +248,5 @@ local Slider = Tab:CreateSlider({
    -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
+
+Rayfield:LoadConfiguration()
